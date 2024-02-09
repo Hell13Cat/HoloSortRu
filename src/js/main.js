@@ -478,8 +478,8 @@ function result(imageNum = 3) {
   document.querySelector('.options').style.display = 'none';
   document.querySelector('.info').style.display = 'none';
 
-  const header = '<div class="result head"><div class="left">Order</div><div class="right">Name</div></div>';
-  const timeStr = `This sorter was completed on ${new Date(timestamp + timeTaken).toString()} and took ${msToReadableTime(timeTaken)}. <a href="${location.protocol}//${sorterURL}">Do another sorter?</a>`;
+  const header = '<div class="result head"><div class="left">Место</div><div class="right">Имя</div></div>';
+  const timeStr = `Эта сортировка звершена ${new Date(timestamp + timeTaken).toString()} в ${msToReadableTime(timeTaken)}. <a href="${location.protocol}//${sorterURL}">Другая сортировка?</a>`;
   const imgRes = (char, num) => {
     const charName = reduceTextWidth(char.name, 'Arial 12px', 160);
     const charTooltip = char.name !== charName ? char.name : '';
@@ -558,8 +558,8 @@ function saveProgress(saveType) {
 
   if (saveType !== 'Autosave') {
     const saveURL = `${location.protocol}//${sorterURL}?${saveData}`;
-    const inProgressText = 'You may click Load Progress after this to resume, or use this URL.';
-    const finishedText = 'You may use this URL to share this result, or click Load Last Result to view it again.';
+    const inProgressText = 'После этого вы можете нажать «Прогресс загрузки», чтобы возобновить работу, или использовать этот URL-адрес.';
+    const finishedText = 'Вы можете использовать этот URL-адрес, чтобы поделиться этим результатом, или нажать «Загрузить последний результат», чтобы просмотреть его еще раз.';
 
     window.prompt(saveType === 'Last Result' ? finishedText : inProgressText, saveURL);
   }
@@ -599,12 +599,12 @@ function generateImage() {
 
     imgButton.removeEventListener('click', generateImage);
     imgButton.innerHTML = '';
-    imgButton.insertAdjacentHTML('beforeend', `<a href="${dataURL}" download="${filename}">Download Image</a><br><br>`);
+    imgButton.insertAdjacentHTML('beforeend', `<a href="${dataURL}" download="${filename}">Скачать изображение</a><br><br>`);
 
-    resetButton.insertAdjacentText('beforeend', 'Reset');
+    resetButton.insertAdjacentText('beforeend', 'Сброс');
     resetButton.addEventListener('click', (event) => {
       imgButton.addEventListener('click', generateImage);
-      imgButton.innerHTML = 'Generate Image';
+      imgButton.innerHTML = 'Создать изображение';
       event.stopPropagation();
     });
     imgButton.insertAdjacentElement('beforeend', resetButton);
