@@ -561,7 +561,7 @@ function saveProgress(saveType) {
     const inProgressText = 'После этого вы можете нажать «Прогресс загрузки», чтобы возобновить работу, или использовать этот URL-адрес.';
     const finishedText = 'Вы можете использовать этот URL-адрес, чтобы поделиться этим результатом, или нажать «Загрузить последний результат», чтобы просмотреть его еще раз.';
 
-    window.prompt(saveType === 'Last Result' ? finishedText : inProgressText, saveURL);
+    window.prompt(saveType === 'последний результат' ? finishedText : inProgressText, saveURL);
   }
 }
 
