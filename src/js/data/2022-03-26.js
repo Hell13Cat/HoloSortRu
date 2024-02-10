@@ -3,9 +3,9 @@ dataSet[dataSetVersion] = {};
 
 dataSet[dataSetVersion].options = [
     {
-        name: "Фильтр по поколениям",
+        name: "Filter by Generation",
         key: "generation",
-        tooltip: "Выберите чтоб сделать фильтр по поколениям",
+        tooltip: "Check this to restrict to certain generations.",
         checked: false,
         sub: [
             { name: "Hololive 0th gen", key: "gen0" },
@@ -23,20 +23,20 @@ dataSet[dataSetVersion].options = [
         ]
     },
     {
-        name: "Удалить не яп.",
+        name: "Remove Non-JP Holos",
         key: "notjphololive",
-        tooltip: "Выберите чтоб убрать не японские поколения",
+        tooltip: "Check this to remove all non-JP Hololive members. HyperPlease.",
         checked: false
     },
     {
-        name: "Оставить девушек",
+        name: "Remove Non-Girls",
         key: "notgirl",
-        tooltip: "Выберие чтоб оставить только девушек"
+        tooltip: "Check this to remove all non-female members."
     },
     {
-        name: "Убрать бывших",
+        name: "Remove Former Members",
         key: "former",
-        tooltip: "Выберите чтоб убрать бывших участников"
+        tooltip: "Check this to remove all former members."
     }
 ];
 
