@@ -67,7 +67,7 @@ function init() {
   document.querySelector('.sorting.undo.button').addEventListener('click', undo);
   document.querySelector('.sorting.save.button').addEventListener('click', () => saveProgress('Progress'));
   
-  document.querySelector('.finished.save.button').addEventListener('click', () => saveProgress('Last Result'));
+  document.querySelector('.finished.save.button').addEventListener('click', () => saveProgress('Последний результата'));
   document.querySelector('.finished.getimg.button').addEventListener('click', generateImage);
   document.querySelector('.finished.list.button').addEventListener('click', generateTextList);
 
@@ -89,7 +89,7 @@ function init() {
     /** If sorting has ended. */
     else if (timeTaken && choices.length === battleNo - 1) {
       switch(ev.key) {
-        case 'k': case '1': saveProgress('Last Result'); break;
+        case 'k': case '1': saveProgress('Последний результата'); break;
         case 'j': case '2': generateImage(); break;
         case 's': case '3': generateTextList(); break;
         default: break;
